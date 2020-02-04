@@ -14,7 +14,7 @@ const getAllServices = (port = defaultPort) =>
         .filter(e =>
           e.rawAttrs.includes('actuator')) // ?
         .map(e => ({
-          url: e.rawAttrs.split('//').pop().split('/').shift(),
+          url: e.rawAttrs.split('href="').pop().split('/actuator').shift(),
           name: e.innerHTML
         })))
 

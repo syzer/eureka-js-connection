@@ -1,6 +1,6 @@
 {
   "name": "eureka-js-connection",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Example using netflix eureka",
   "main": "index.js",
   "scripts": {
