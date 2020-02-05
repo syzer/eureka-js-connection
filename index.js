@@ -1,4 +1,3 @@
-// http://localhost:8761/
 const axios = require('axios')
 const { prop } = require('ramda')
 const { parse } = require('node-html-parser')
