@@ -3,9 +3,11 @@ const { prop } = require('ramda')
 const { parse } = require('node-html-parser')
 
 const defaultPort = process.env.EUREKA_PORT || 8761
+const defaultEurekaUri = process.env.EUREKA_URI || `http://localhost`
+const defaultEurekaUrl = process.env.EUREKA_URL || `${defaultEurekaUri}:${defaultPort}`
 
-const getAllServices = (port = defaultPort) =>
-  axios.get(`http://localhost:${port}/`)
+const getAllServices = (url = defaultEurekaUrl) =>
+  axios.get(url)
     .then(prop('data'))
     .then(html =>
       parse(html)
